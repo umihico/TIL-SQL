@@ -52,3 +52,15 @@ alter table movies add Aspect_ratio float;
 ALTER TABLE Movies ADD COLUMN Language TEXT DEFAULT "English";
 drop table if exists movies;
 ```
+
+## Intermidiate
+```
+SELECT * FROM sales_associates WHERE salary > (SELECT AVG(revenue_generated) FROM sales_associates);
+SELECT * FROM employees WHERE salary > (SELECT AVG(revenue_generated) FROM employees AS dept_employees WHERE dept_employees.department = employees.department);
+SELECT * FROM mytable WHERE column IN/NOT IN (SELECT another_column FROM another_table);
+SELECT column, another_column FROM mytable
+  UNION / UNION ALL / INTERSECT / EXCEPT
+  SELECT other_column, yet_another_column FROM another_table
+  ORDER BY column DESC
+  LIMIT n;
+```
