@@ -10,5 +10,7 @@ create table tag(
 	tag1 varchar(60) not null,
 	pair_id varchar(60) not null unique,
 	count int not null
-)
+)DEFAULT CHARSET=utf8
+show table status from database_name
+show variables like 'character%';
 ```
