@@ -4,4 +4,11 @@ SELECT COLUMN_name,COLUMN_COMMENT FROM information_schema.COLUMNS WHERE TABLE_NA
 SELECT table_name, table_comment FROM information_schema.tables
 whereRaw("products_name like ? ",["%".$http_request->products_name."%"])
 SELECT table_name, table_comment FROM information_schema.tables WHERE table_schema = database();
+create table tag(
+	id int primary key auto_increment,
+	tag0 varchar(60) not null,
+	tag1 varchar(60) not null,
+	pair_id varchar(60) not null unique,
+	count int not null
+)
 ```
