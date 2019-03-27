@@ -13,4 +13,6 @@ create table tag(
 )DEFAULT CHARSET=utf8
 show table status from database_name
 show variables like 'character%';
+drop table xxxx;
+select sleep(5);
 ```
