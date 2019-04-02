@@ -15,4 +15,5 @@ show table status from database_name
 show variables like 'character%';
 drop table xxxx;
 select sleep(5);
+sELECT * FROM t_stock_customer WHERE mid(replace(mobile,'-',''), 1) = replace'8012345678'
 ```
