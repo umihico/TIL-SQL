@@ -16,4 +16,5 @@ show variables like 'character%';
 drop table xxxx;
 select sleep(5);
 sELECT * FROM t_stock_customer WHERE mid(replace(mobile,'-',''), 1) = replace'8012345678'
+create table products( id int not null primary key auto_increment, products_id int not null, tag_id int not null, foreign key(tag_id) references tag(id), foreign key(products_id) references products(products_id), UNIQUE KEY (products_id, tag_id)) DEFAULT CHARSET=utf8
 ```
