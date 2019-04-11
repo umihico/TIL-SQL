@@ -21,4 +21,8 @@ SHOW VARIABLES LIKE '%query_cache_%'
 show create table products
 ALTER TABLE products DROP column 7digit_id;
 ALTER TABLE products ADD 7digit_id varchar(7) GENERATED ALWAYS AS (right(`id`,7)) STORED
+ALTER TABLE details modify automated_name varchar(255) GENERATED ALWAYS AS (concat(
+	(case when (age is null) then '' else concat(' ',age,'年') end),
+	(case when (year is null) then '' else concat(' ',YEAR,'年') end)
+)) STORED
 ```
