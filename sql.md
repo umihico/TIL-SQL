@@ -25,4 +25,5 @@ ALTER TABLE details modify automated_name varchar(255) GENERATED ALWAYS AS (conc
 	(case when (age is null) then '' else concat(' ',age,'年') end),
 	(case when (year is null) then '' else concat(' ',YEAR,'年') end)
 )) STORED
+select version()
 ```
