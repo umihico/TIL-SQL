@@ -26,4 +26,5 @@ ALTER TABLE details modify automated_name varchar(255) GENERATED ALWAYS AS (conc
 	(case when (year is null) then '' else concat(' ',YEAR,'年') end)
 )) STORED
 select version()
+alter table products add notax_price int generated always as (TRUNCATE((price/1.08)+0.9, 0)) stored;
 ```
