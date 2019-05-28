@@ -27,4 +27,5 @@ ALTER TABLE details modify automated_name varchar(255) GENERATED ALWAYS AS (conc
 )) STORED
 select version()
 alter table products add notax_price int generated always as (TRUNCATE((price/1.08)+0.9, 0)) stored;
+UPDATE products SET price = ELT(FIELD(id,837495,837496,837497),35000,35000,35000),name = ELT(FIELD(id,837495,837496,837497),"a","b","c") WHERE id IN (837495,837496,837497)
 ```
